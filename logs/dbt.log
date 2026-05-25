@@ -1,0 +1,72 @@
+[0m12:36:18.142319 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110619d30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111cc7610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111cc7890>]}
+
+
+============================== 12:36:18.144889 | 447f9d4e-0c37-4596-9078-923e0c7cc1cc ==============================
+[0m12:36:18.144889 [info ] [MainThread]: Running with dbt=1.11.11
+[0m12:36:18.145132 [debug] [MainThread]: running dbt with arguments {'write_json': 'True', 'profiles_dir': '/Users/devarajusubramanyam/.dbt', 'warn_error': 'None', 'log_path': 'logs', 'static_parser': 'True', 'indirect_selection': 'eager', 'quiet': 'False', 'invocation_command': 'dbt init Ecommerce', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'log_format': 'default', 'use_experimental_parser': 'False', 'cache_selected_only': 'False', 'empty': 'None', 'partial_parse': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True', 'log_cache_events': 'False', 'debug': 'False', 'use_colors': 'True', 'introspect': 'True', 'fail_fast': 'False'}
+[0m12:36:18.151181 [debug] [MainThread]: Starter project path: /Users/devarajusubramanyam/Documents/ECOMMERCE_DBT/venv/lib/python3.13/site-packages/dbt/include/starter_project
+[0m12:36:18.154994 [info ] [MainThread]: 
+Your new dbt project "Ecommerce" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m12:36:18.155649 [info ] [MainThread]: Setting up your profile.
+[0m12:37:55.648502 [info ] [MainThread]: Profile Ecommerce written to /Users/devarajusubramanyam/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m12:37:55.654259 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 97.54378, "process_in_blocks": "0", "process_kernel_time": 0.107305, "process_mem_max_rss": "141787136", "process_out_blocks": "0", "process_user_time": 0.620671}
+[0m12:37:55.655575 [debug] [MainThread]: Command `dbt init` succeeded at 12:37:55.655447 after 97.55 seconds
+[0m12:37:55.656022 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1147f9480>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1147ddb50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x114884050>]}
+[0m12:37:55.656404 [debug] [MainThread]: Flushing usage events
+[0m12:37:58.814932 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m12:38:08.176644 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1086f9d30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10989b750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10989b9d0>]}
+
+
+============================== 12:38:08.179048 | bbf9f433-b136-4eb5-9f93-b0dfb9409eed ==============================
+[0m12:38:08.179048 [info ] [MainThread]: Running with dbt=1.11.11
+[0m12:38:08.179276 [debug] [MainThread]: running dbt with arguments {'target_path': 'None', 'profiles_dir': '/Users/devarajusubramanyam/.dbt', 'use_colors': 'True', 'quiet': 'False', 'introspect': 'True', 'send_anonymous_usage_stats': 'True', 'log_format': 'default', 'partial_parse': 'True', 'invocation_command': 'dbt debug', 'write_json': 'True', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'empty': 'None', 'fail_fast': 'False', 'version_check': 'True', 'debug': 'False', 'cache_selected_only': 'False', 'use_experimental_parser': 'False', 'warn_error': 'None', 'static_parser': 'True', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'log_path': 'logs'}
+[0m12:38:08.186524 [info ] [MainThread]: dbt version: 1.11.11
+[0m12:38:08.186661 [info ] [MainThread]: python version: 3.13.5
+[0m12:38:08.186755 [info ] [MainThread]: python path: /Users/devarajusubramanyam/Documents/ECOMMERCE_DBT/venv/bin/python
+[0m12:38:08.186840 [info ] [MainThread]: os info: macOS-26.5-arm64-arm-64bit-Mach-O
+[0m12:38:08.353921 [info ] [MainThread]: Using profiles dir at /Users/devarajusubramanyam/.dbt
+[0m12:38:08.354118 [info ] [MainThread]: Using profiles.yml file at /Users/devarajusubramanyam/.dbt/profiles.yml
+[0m12:38:08.354223 [info ] [MainThread]: Using dbt_project.yml file at /Users/devarajusubramanyam/Documents/ECOMMERCE_DBT/dbt_project.yml
+[0m12:38:08.354333 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m12:38:08.355471 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.20853062, "process_in_blocks": "0", "process_kernel_time": 0.107027, "process_mem_max_rss": "140804096", "process_out_blocks": "0", "process_user_time": 0.581942}
+[0m12:38:08.355694 [debug] [MainThread]: Command `dbt debug` failed at 12:38:08.355659 after 0.21 seconds
+[0m12:38:08.355813 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a5cf360>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a6917f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a5c4d10>]}
+[0m12:38:08.355932 [debug] [MainThread]: Flushing usage events
+[0m12:38:09.928086 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m12:40:43.316732 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1085f5d30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109797610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109797890>]}
+
+
+============================== 12:40:43.319313 | f83da522-3405-4d7a-90b1-1d53507dd1c0 ==============================
+[0m12:40:43.319313 [info ] [MainThread]: Running with dbt=1.11.11
+[0m12:40:43.319570 [debug] [MainThread]: running dbt with arguments {'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'introspect': 'True', 'log_path': 'logs', 'log_cache_events': 'False', 'indirect_selection': 'eager', 'no_print': 'None', 'use_colors': 'True', 'version_check': 'True', 'profiles_dir': '/Users/devarajusubramanyam/.dbt', 'printer_width': '80', 'static_parser': 'True', 'log_format': 'default', 'cache_selected_only': 'False', 'use_experimental_parser': 'False', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'target_path': 'None', 'empty': 'None', 'write_json': 'True', 'debug': 'False', 'warn_error': 'None', 'invocation_command': 'dbt debug'}
+[0m12:40:43.326402 [info ] [MainThread]: dbt version: 1.11.11
+[0m12:40:43.326552 [info ] [MainThread]: python version: 3.13.5
+[0m12:40:43.326650 [info ] [MainThread]: python path: /Users/devarajusubramanyam/Documents/ECOMMERCE_DBT/venv/bin/python
+[0m12:40:43.326737 [info ] [MainThread]: os info: macOS-26.5-arm64-arm-64bit-Mach-O
+[0m12:40:43.513597 [info ] [MainThread]: Using profiles dir at /Users/devarajusubramanyam/.dbt
+[0m12:40:43.513798 [info ] [MainThread]: Using profiles.yml file at /Users/devarajusubramanyam/.dbt/profiles.yml
+[0m12:40:43.513900 [info ] [MainThread]: Using dbt_project.yml file at /Users/devarajusubramanyam/Documents/ECOMMERCE_DBT/dbt_project.yml
+[0m12:40:43.514016 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m12:40:43.515428 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.22663571, "process_in_blocks": "0", "process_kernel_time": 0.122108, "process_mem_max_rss": "140673024", "process_out_blocks": "0", "process_user_time": 0.575067}
+[0m12:40:43.515635 [debug] [MainThread]: Command `dbt debug` failed at 12:40:43.515604 after 0.23 seconds
+[0m12:40:43.515747 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a4cb360>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a58d7f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a4c0d10>]}
+[0m12:40:43.515862 [debug] [MainThread]: Flushing usage events
+[0m12:40:45.901088 [debug] [MainThread]: An error was encountered while trying to flush usage events
