@@ -1,0 +1,128 @@
+version: 2
+
+models:
+
+  - name: dim_customers
+    description: "This is the customers dimension table"
+
+    columns:
+
+      - name: customerid
+        description: "The unique identifier for each customer"
+        tests:
+          - not_null
+
+      - name: customer_sk
+        description: "The surrogate key for each customer"
+        tests:
+          - not_null
+          - unique
+
+  - name: dim_products
+    description: "This is the products dimension table"
+
+    columns:
+
+      - name: product_id
+        description: "The unique identifier for each product"
+        tests:
+          - not_null
+          - unique
+
+      - name: weight_category
+        description: "The weight category of the product"
+        tests:
+          - not_null
+
+  - name: dim_payment
+    description: "This is the payments dimension table"
+
+    columns:
+
+      - name: order_id
+        description: "The unique identifier for the order"
+        tests:
+          - not_null
+
+      - name: payment_type
+        description: "The payment method used by the customer"
+        tests:
+          - accepted_values:
+              values: [credit_card, boleto, voucher, debit_card]
+
+  - name: dim_reviews
+    description: "This is the reviews dimension table"
+
+    columns:
+
+      - name: review_id
+        description: "The unique identifier for each review"
+        tests:
+          - not_null
+
+      - name: review_score
+        description: "The score given by the customer in the review"
+        tests:
+          - accepted_values:
+              values: [1, 2, 3, 4, 5]
+
+      - name: order_id
+        description: "The order associated with the review"
+        tests:
+          - not_null
+
+  - name: dim_sellers
+    description: "This is the sellers dimension table"
+
+    columns:
+
+      - name: seller_id
+        description: "The unique identifier for each seller"
+        tests:
+          - not_null
+          - unique
+
+      - name: seller_city
+        description: "The city where the seller is located"
+        tests:
+          - not_null
+
+      - name: seller_state
+        description: "The state where the seller is located"
+        tests:
+          - not_null
+
+  - name: fct_orders
+    description: "This is the orders fact table"
+
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - order_id
+            - order_item_id
+
+    columns:
+
+      - name: order_id
+        description: "The unique identifier for each order"
+        tests:
+          - not_null
+
+      - name: order_item_id
+        description: "The unique identifier for the item within an order"
+        tests:
+          - not_null
+
+      - name: product_id
+        description: "The unique identifier for the product ordered"
+        tests:
+          - not_null
+
+
+      - name: seller_id
+        description: "The unique identifier for the seller"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_sellers')
+              field: seller_id
