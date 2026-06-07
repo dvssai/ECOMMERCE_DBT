@@ -48,7 +48,12 @@ models:
         description: "The payment method used by the customer"
         tests:
           - accepted_values:
-              values: [credit_card, boleto, voucher, debit_card]
+              arguments:
+                values:
+                  - credit_card
+                  - boleto
+                  - voucher
+                  - debit_card
 
   - name: dim_reviews
     description: "This is the reviews dimension table"
@@ -64,7 +69,13 @@ models:
         description: "The score given by the customer in the review"
         tests:
           - accepted_values:
-              values: [1, 2, 3, 4, 5]
+              arguments:
+                values:
+                  - 1
+                  - 2
+                  - 3
+                  - 4
+                  - 5
 
       - name: order_id
         description: "The order associated with the review"
@@ -97,9 +108,10 @@ models:
 
     tests:
       - dbt_utils.unique_combination_of_columns:
-          combination_of_columns:
-            - order_id
-            - order_item_id
+          arguments:
+            combination_of_columns:
+              - order_id
+              - order_item_id
 
     columns:
 
@@ -118,11 +130,11 @@ models:
         tests:
           - not_null
 
-
       - name: seller_id
         description: "The unique identifier for the seller"
         tests:
           - not_null
           - relationships:
-              to: ref('dim_sellers')
-              field: seller_id
+              arguments:
+                to: ref('dim_sellers')
+                field: seller_id
