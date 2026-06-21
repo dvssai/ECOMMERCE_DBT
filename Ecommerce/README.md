@@ -90,5 +90,3 @@ dbt docs serve
 ## Author
 
 Devaraju Subramanyam
-
-Aspiring Data Analyst | Analytics Engineer | Data Engineering Enthusiast
